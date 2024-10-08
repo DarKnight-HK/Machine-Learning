@@ -23,7 +23,7 @@ pub fn train(
         let dw_cost = (cost(weight + epsilon, training_data, bias)
             - cost(weight, training_data, bias))
             / epsilon;
-        let db_cost = (cost(weight + epsilon, training_data, bias)
+        let db_cost = (cost(weight, training_data, bias + epsilon)
             - cost(weight, training_data, bias))
             / epsilon;
 
